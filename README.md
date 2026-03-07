@@ -4,7 +4,7 @@
 
 Paper: [📖 Dr.Seg](https://arxiv.org/abs/2603.00152)        
 Model: [🤗 Dr.Seg-7B](https://huggingface.co/hao05/Dr_Seg)  
-Dataset: [🤗 COCONut(WIP)]()
+Dataset: [🤗 COCONut](https://huggingface.co/datasets/hao05/coconut/settings)
 
 Overview of Dr. Seg:
 <div align=center>
@@ -15,8 +15,9 @@ Overview of Dr. Seg:
 - [x] Release checkpoint
 - [x] Renew README
 - [x] Release training code
-- [ ] Release evaluation code
-- [ ] Release dataset
+- [x] Release evaluation code on segmentation
+- [x] Release dataset
+- [ ] Release evaluation code on detection and counting
 
 ## Installation
 ```bash
@@ -86,7 +87,7 @@ python3 training_scripts/model_merger.py --local_dir [path_to_your_actor_checkpo
 REASONING_MODEL_PATH:=your/path/to/checkpoint
 ``` 
 
-(2)(Optional) Modify ```TEST_DATA_PATH:=Ricky06662/ReasonSeg_val``` in ``` evaluation_scripts/eval_segmentation_drseg.sh```: 
+(2) (Optional) Modify ```TEST_DATA_PATH:=Ricky06662/ReasonSeg_val``` in ``` evaluation_scripts/eval_segmentation_drseg.sh```: 
 ```bash
 REASONING_MODEL_PATH:=datasete/you/want/to/eval
 ``` 
